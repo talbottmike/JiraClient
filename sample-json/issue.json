@@ -1,0 +1,178 @@
+{
+  "expand": "renderedFields,names,schema,transitions,operations,editmeta,changelog,versionedRepresentations",
+  "id": "10000",
+  "self": "https://talbottmike.atlassian.net/rest/api/2/issue/10000",
+  "key": "JIR-1",
+  "fields": {
+    "issuetype": {
+      "self": "https://talbottmike.atlassian.net/rest/api/2/issuetype/10002",
+      "id": "10002",
+      "description": "A task that needs to be done.",
+      "iconUrl": "https://talbottmike.atlassian.net/secure/viewavatar?size=xsmall&avatarId=10318&avatarType=issuetype",
+      "name": "Task",
+      "subtask": false,
+      "avatarId": 10318
+    },
+    "timespent": null,
+    "project": {
+      "self": "https://talbottmike.atlassian.net/rest/api/2/project/10000",
+      "id": "10000",
+      "key": "JIR",
+      "name": "JiraClient",
+      "avatarUrls": {
+        "48x48": "https://talbottmike.atlassian.net/secure/projectavatar?avatarId=10324",
+        "24x24": "https://talbottmike.atlassian.net/secure/projectavatar?size=small&avatarId=10324",
+        "16x16": "https://talbottmike.atlassian.net/secure/projectavatar?size=xsmall&avatarId=10324",
+        "32x32": "https://talbottmike.atlassian.net/secure/projectavatar?size=medium&avatarId=10324"
+      }
+    },
+    "fixVersions": [],
+    "aggregatetimespent": null,
+    "resolution": null,
+    "resolutiondate": null,
+    "workratio": -1,
+    "lastViewed": "2016-02-26T21:17:06.67-05:00",
+    "watches": {
+      "self": "https://talbottmike.atlassian.net/rest/api/2/issue/JIR-1/watchers",
+      "watchCount": 1,
+      "isWatching": true
+    },
+    "created": "2016-02-26T21:17:05.414-05:00",
+    "customfield_10020": "Not started",
+    "customfield_10021": null,
+    "priority": {
+      "self": "https://talbottmike.atlassian.net/rest/api/2/priority/3",
+      "iconUrl": "https://talbottmike.atlassian.net/images/icons/priorities/medium.svg",
+      "name": "Medium",
+      "id": "3"
+    },
+    "labels": [],
+    "customfield_10016": null,
+    "customfield_10017": null,
+    "customfield_10018": null,
+    "customfield_10019": null,
+    "timeestimate": null,
+    "aggregatetimeoriginalestimate": null,
+    "versions": [],
+    "issuelinks": [],
+    "assignee": null,
+    "updated": "2016-02-26T21:17:05.414-05:00",
+    "status": {
+      "self": "https://talbottmike.atlassian.net/rest/api/2/status/10000",
+      "description": "",
+      "iconUrl": "https://talbottmike.atlassian.net/",
+      "name": "To Do",
+      "id": "10000",
+      "statusCategory": {
+        "self": "https://talbottmike.atlassian.net/rest/api/2/statuscategory/2",
+        "id": 2,
+        "key": "new",
+        "colorName": "blue-gray",
+        "name": "To Do"
+      }
+    },
+    "components": [],
+    "timeoriginalestimate": null,
+    "description": "Test Ticket Description",
+    "customfield_10010": null,
+    "customfield_10011": null,
+    "customfield_10012": null,
+    "customfield_10013": null,
+    "customfield_10014": null,
+    "timetracking": {},
+    "customfield_10015": null,
+    "customfield_10007": null,
+    "attachment": [
+      {
+        "self": "https://talbottmike.atlassian.net/rest/api/2/attachment/10000",
+        "id": "10000",
+        "filename": "Healthy.png",
+        "author": {
+          "self": "https://talbottmike.atlassian.net/rest/api/2/user?username=admin",
+          "name": "admin",
+          "key": "admin",
+          "emailAddress": "talbottmike@gmail.com",
+          "avatarUrls": {
+            "48x48": "https://secure.gravatar.com/avatar/2c99951733567294ffa823d2b85fd831?d=mm&s=48",
+            "24x24": "https://secure.gravatar.com/avatar/2c99951733567294ffa823d2b85fd831?d=mm&s=24",
+            "16x16": "https://secure.gravatar.com/avatar/2c99951733567294ffa823d2b85fd831?d=mm&s=16",
+            "32x32": "https://secure.gravatar.com/avatar/2c99951733567294ffa823d2b85fd831?d=mm&s=32"
+          },
+          "displayName": "Mike Talbott [Administrator]",
+          "active": true,
+          "timeZone": "America/New_York"
+        },
+        "created": "2016-02-26T21:16:54.155-05:00",
+        "size": 7540,
+        "mimeType": "image/png",
+        "content": "https://talbottmike.atlassian.net/secure/attachment/10000/Healthy.png",
+        "thumbnail": "https://talbottmike.atlassian.net/secure/thumbnail/10000/_thumb_10000.png"
+      }
+    ],
+    "customfield_10009": null,
+    "aggregatetimeestimate": null,
+    "summary": "Test Ticket Summary",
+    "creator": {
+      "self": "https://talbottmike.atlassian.net/rest/api/2/user?username=admin",
+      "name": "admin",
+      "key": "admin",
+      "emailAddress": "talbottmike@gmail.com",
+      "avatarUrls": {
+        "48x48": "https://secure.gravatar.com/avatar/2c99951733567294ffa823d2b85fd831?d=mm&s=48",
+        "24x24": "https://secure.gravatar.com/avatar/2c99951733567294ffa823d2b85fd831?d=mm&s=24",
+        "16x16": "https://secure.gravatar.com/avatar/2c99951733567294ffa823d2b85fd831?d=mm&s=16",
+        "32x32": "https://secure.gravatar.com/avatar/2c99951733567294ffa823d2b85fd831?d=mm&s=32"
+      },
+      "displayName": "Mike Talbott [Administrator]",
+      "active": true,
+      "timeZone": "America/New_York"
+    },
+    "subtasks": [],
+    "reporter": {
+      "self": "https://talbottmike.atlassian.net/rest/api/2/user?username=admin",
+      "name": "admin",
+      "key": "admin",
+      "emailAddress": "talbottmike@gmail.com",
+      "avatarUrls": {
+        "48x48": "https://secure.gravatar.com/avatar/2c99951733567294ffa823d2b85fd831?d=mm&s=48",
+        "24x24": "https://secure.gravatar.com/avatar/2c99951733567294ffa823d2b85fd831?d=mm&s=24",
+        "16x16": "https://secure.gravatar.com/avatar/2c99951733567294ffa823d2b85fd831?d=mm&s=16",
+        "32x32": "https://secure.gravatar.com/avatar/2c99951733567294ffa823d2b85fd831?d=mm&s=32"
+      },
+      "displayName": "Mike Talbott [Administrator]",
+      "active": true,
+      "timeZone": "America/New_York"
+    },
+    "customfield_10000": null,
+    "aggregateprogress": {
+      "progress": 0,
+      "total": 0
+    },
+    "customfield_10001": null,
+    "customfield_10002": "0|hzzzzz:",
+    "customfield_10003": null,
+    "environment": null,
+    "duedate": null,
+    "progress": {
+      "progress": 0,
+      "total": 0
+    },
+    "comment": {
+      "startAt": 0,
+      "maxResults": 0,
+      "total": 0,
+      "comments": []
+    },
+    "votes": {
+      "self": "https://talbottmike.atlassian.net/rest/api/2/issue/JIR-1/votes",
+      "votes": 0,
+      "hasVoted": false
+    },
+    "worklog": {
+      "startAt": 0,
+      "maxResults": 20,
+      "total": 0,
+      "worklogs": []
+    }
+  }
+}

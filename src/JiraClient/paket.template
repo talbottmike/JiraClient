@@ -1,0 +1,23 @@
+type project
+owners
+    Mike Talbott
+authors 
+    Mike Talbott
+projectUrl
+    http://github.com/talbottmike/JiraClient
+iconUrl
+    https://raw.githubusercontent.com/talbottmike/JiraClient/master/docs/files/img/logo.png
+licenseUrl
+    http://github.com/talbottmike/JiraClient/blob/master/LICENSE.txt
+requireLicenseAcceptance
+    false
+copyright
+    Copyright 2015
+tags
+    Jira FSharp Atlassian
+summary
+    FSharp Jira Client
+description
+    A simple library for interacting with the Jira API
+
+
