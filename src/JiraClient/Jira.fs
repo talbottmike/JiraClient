@@ -16,6 +16,19 @@ type IssueProvider = FSharp.Data.JsonProvider<"../../sample-json/issue.json", Em
 /// Used to provide required parameters for creating a new issue.
 type IssueRequest = {Project:string; Summary:string; Description:string; Issuetype:int}
 
+module internal UnionTypeHelper =
+  open Microsoft.FSharp.Reflection
+  open System.Globalization
+
+  let toString (x:'a) = 
+      match FSharpValue.GetUnionFields(x, typeof<'a>) with
+      | case, _ -> case.Name
+
+  let fromString<'a> (s:string) v =
+      match FSharpType.GetUnionCases typeof<'a> |> Array.filter (fun case -> case.Name.Equals(s,StringComparison.OrdinalIgnoreCase)) with
+      |[|case|] -> Some(FSharpValue.MakeUnion(case,[|v|]) :?> 'a)
+      |_ -> None
+
 // Union type to represent the updatable fields on an issue
 type UpdateField =
   Summary of string
@@ -24,6 +37,13 @@ type UpdateField =
       match x with
       | Summary s -> ("summary", s)
       | Description s -> ("description", s)
+    member internal this.toString = UnionTypeHelper.toString this
+    static member internal fromString s v = UnionTypeHelper.fromString<UpdateField> s v
+    static member CSharpCreate (name, value) = 
+      match UpdateField.fromString name value with
+      | None -> failwith "Could not create type. Verify that the name provided is available."
+      | Some x -> x
+
 
 /// Used to map public types to a serializable format that will produce the expected Json for the REST API
 module internal SerializableType =
