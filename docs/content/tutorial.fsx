@@ -12,6 +12,7 @@ The following are some basic examples of how to use the library.
 *)
 
 #r "JiraClient.dll"
+#r "../../packages/FSharp.Data/lib/net40/FSharp.Data.dll"
 open JiraClient
 
 let baseUri = "https://talbottmike.atlassian.net/rest/api/2/"
@@ -32,11 +33,9 @@ client.DeleteIssue "JIR-1"
 client.AvailableFields
 
 // Update an existing issue
-client.UpdateIssue "" [("","")]
-
-// Dump a rest response to file
-client.Dump "issue/KB-2040"
+UpdateField.Description "Updated Description Blah"
+|> client.UpdateIssueField "JIR-1" 
 
 (**
-Some more info
+These examples are a work in progress and may be incomplete.
 *)
