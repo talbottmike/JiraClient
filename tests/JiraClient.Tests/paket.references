@@ -1,5 +1,0 @@
-group Test
-NUnit
-NUnit.Runners
-FSharp.Core
-FSharp.Data
