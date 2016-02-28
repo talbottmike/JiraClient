@@ -103,7 +103,7 @@
 <div class="tip" id="fs12">member Jira.GetIssue : key:string -&gt; FSharp.Data.JsonProvider&lt;...&gt;.Root</div>
 <div class="tip" id="fs13">member Jira.DeleteIssue : key:string -&gt; FSharp.Data.HttpResponse</div>
 <div class="tip" id="fs14">property Jira.AvailableFields: string</div>
-<div class="tip" id="fs15">type UpdateField =<br />&#160;&#160;| Summary of string<br />&#160;&#160;| Description of string<br />&#160;&#160;member ToUpdateParameter : string * string<br /><br />Full name: JiraClient.UpdateField</div>
+<div class="tip" id="fs15">type UpdateField =<br />&#160;&#160;| Summary of string<br />&#160;&#160;| Description of string<br />&#160;&#160;member ToUpdateParameter : string * string<br />&#160;&#160;member private toString : string<br />&#160;&#160;static member CSharpCreate : name:string * value:obj -&gt; UpdateField<br />&#160;&#160;static member private fromString : s:string -&gt; v:obj -&gt; UpdateField option<br /><br />Full name: JiraClient.UpdateField</div>
 <div class="tip" id="fs16">member Jira.UpdateIssueField : key:string -&gt; update:UpdateField -&gt; FSharp.Data.HttpResponse</div>
 
         </div>
