@@ -59,9 +59,9 @@
 <span class="l">22: </span>
 <span class="l">23: </span>
 <span class="l">24: </span>
-<span class="l">25: </span>
 </pre></td>
 <td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="prep">#r</span> <span class="s">&quot;JiraClient.dll&quot;</span>
+<span class="prep">#r</span> <span class="s">&quot;../../packages/FSharp.Data/lib/net40/FSharp.Data.dll&quot;</span>
 <span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">JiraClient</span>
 
 <span class="k">let</span> <span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">baseUri</span> <span class="o">=</span> <span class="s">&quot;https://talbottmike.atlassian.net/rest/api/2/&quot;</span>
@@ -70,38 +70,41 @@
 
 <span class="c">// Create a new issue</span>
 <span class="k">let</span> <span onmouseout="hideTip(event, 'fs6', 8)" onmouseover="showTip(event, 'fs6', 8)" class="i">testIssue</span> <span class="o">=</span> { <span onmouseout="hideTip(event, 'fs7', 9)" onmouseover="showTip(event, 'fs7', 9)" class="t">IssueRequest</span><span class="o">.</span><span class="i">Project</span><span class="o">=</span><span class="s">&quot;EA&quot;</span>; <span onmouseout="hideTip(event, 'fs8', 10)" onmouseover="showTip(event, 'fs8', 10)" class="i">Summary</span><span class="o">=</span><span class="s">&quot;Test Summary&quot;</span>; <span onmouseout="hideTip(event, 'fs9', 11)" onmouseover="showTip(event, 'fs9', 11)" class="i">Description</span><span class="o">=</span><span class="s">&quot;Test Desc&quot;</span>; <span class="i">Issuetype</span><span class="o">=</span><span class="n">3</span> }
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs10', 12)" onmouseover="showTip(event, 'fs10', 12)" class="i">myIssue</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs4', 13)" onmouseover="showTip(event, 'fs4', 13)" class="i">client</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs11', 14)" onmouseover="showTip(event, 'fs11', 14)" class="i">CreateIssue</span> <span onmouseout="hideTip(event, 'fs6', 15)" onmouseover="showTip(event, 'fs6', 15)" class="i">testIssue</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs10', 12)" onmouseover="showTip(event, 'fs10', 12)" class="i">myIssue</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs4', 13)" onmouseover="showTip(event, 'fs4', 13)" class="i">client</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs11', 14)" onmouseover="showTip(event, 'fs11', 14)" class="f">CreateIssue</span> <span onmouseout="hideTip(event, 'fs6', 15)" onmouseover="showTip(event, 'fs6', 15)" class="i">testIssue</span>
 
 <span class="c">// Retrieve an existing issue</span>
-<span onmouseout="hideTip(event, 'fs4', 16)" onmouseover="showTip(event, 'fs4', 16)" class="i">client</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs11', 17)" onmouseover="showTip(event, 'fs11', 17)" class="i">GetIssue</span> <span class="s">&quot;JIR-1&quot;</span>
+<span onmouseout="hideTip(event, 'fs4', 16)" onmouseover="showTip(event, 'fs4', 16)" class="i">client</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs12', 17)" onmouseover="showTip(event, 'fs12', 17)" class="f">GetIssue</span> <span class="s">&quot;JIR-1&quot;</span>
 
 <span class="c">// Delete an existing issue</span>
-<span onmouseout="hideTip(event, 'fs4', 18)" onmouseover="showTip(event, 'fs4', 18)" class="i">client</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs11', 19)" onmouseover="showTip(event, 'fs11', 19)" class="i">DeleteIssue</span> <span class="s">&quot;JIR-1&quot;</span>
+<span onmouseout="hideTip(event, 'fs4', 18)" onmouseover="showTip(event, 'fs4', 18)" class="i">client</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs13', 19)" onmouseover="showTip(event, 'fs13', 19)" class="f">DeleteIssue</span> <span class="s">&quot;JIR-1&quot;</span>
 
 <span class="c">// Get issue metadata</span>
-<span onmouseout="hideTip(event, 'fs4', 20)" onmouseover="showTip(event, 'fs4', 20)" class="i">client</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs11', 21)" onmouseover="showTip(event, 'fs11', 21)" class="i">AvailableFields</span>
+<span onmouseout="hideTip(event, 'fs4', 20)" onmouseover="showTip(event, 'fs4', 20)" class="i">client</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs14', 21)" onmouseover="showTip(event, 'fs14', 21)" class="i">AvailableFields</span>
 
 <span class="c">// Update an existing issue</span>
-<span onmouseout="hideTip(event, 'fs4', 22)" onmouseover="showTip(event, 'fs4', 22)" class="i">client</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs11', 23)" onmouseover="showTip(event, 'fs11', 23)" class="i">UpdateIssue</span> <span class="s">&quot;&quot;</span> [(<span class="s">&quot;&quot;</span>,<span class="s">&quot;&quot;</span>)]
-
-<span class="c">// Dump a rest response to file</span>
-<span onmouseout="hideTip(event, 'fs4', 24)" onmouseover="showTip(event, 'fs4', 24)" class="i">client</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs11', 25)" onmouseover="showTip(event, 'fs11', 25)" class="i">Dump</span> <span class="s">&quot;issue/KB-2040&quot;</span>
+<span onmouseout="hideTip(event, 'fs15', 22)" onmouseover="showTip(event, 'fs15', 22)" class="t">UpdateField</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs9', 23)" onmouseover="showTip(event, 'fs9', 23)" class="p">Description</span> <span class="s">&quot;Updated Description Blah&quot;</span>
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs4', 24)" onmouseover="showTip(event, 'fs4', 24)" class="i">client</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs16', 25)" onmouseover="showTip(event, 'fs16', 25)" class="f">UpdateIssueField</span> <span class="s">&quot;JIR-1&quot;</span> 
 </code></pre></td>
 </tr>
 </table>
-<p>Some more info</p>
+<p>These examples are a work in progress and may be incomplete.</p>
 
 <div class="tip" id="fs1">namespace JiraClient</div>
 <div class="tip" id="fs2">val baseUri : string<br /><br />Full name: Tutorial.baseUri</div>
 <div class="tip" id="fs3">val credentials : string<br /><br />Full name: Tutorial.credentials</div>
 <div class="tip" id="fs4">val client : Jira<br /><br />Full name: Tutorial.client</div>
-<div class="tip" id="fs5">Multiple items<br /><br />--------------------<br />new : baseUri:string * credentials:string -&gt; Jira</div>
+<div class="tip" id="fs5">Multiple items<br />type Jira =<br />&#160;&#160;new : baseUri:string * credentials:string -&gt; Jira<br />&#160;&#160;member CreateIssue : request:IssueRequest -&gt; HttpResponse<br />&#160;&#160;member CustomRequest : uriPart:string -&gt; string<br />&#160;&#160;member DeleteIssue : key:string -&gt; HttpResponse<br />&#160;&#160;member GetIssue : key:string -&gt; Root<br />&#160;&#160;member UpdateIssueField : key:string -&gt; update:UpdateField -&gt; HttpResponse<br />&#160;&#160;member UpdateIssueFields : key:string * updates:seq&lt;UpdateField&gt; -&gt; HttpResponse<br />&#160;&#160;member AvailableFields : string<br /><br />Full name: JiraClient.Jira<br /><br />--------------------<br />new : baseUri:string * credentials:string -&gt; Jira</div>
 <div class="tip" id="fs6">val testIssue : IssueRequest<br /><br />Full name: Tutorial.testIssue</div>
 <div class="tip" id="fs7">type IssueRequest =<br />&#160;&#160;{Project: string;<br />&#160;&#160;&#160;Summary: string;<br />&#160;&#160;&#160;Description: string;<br />&#160;&#160;&#160;Issuetype: int;}<br /><br />Full name: JiraClient.IssueRequest</div>
 <div class="tip" id="fs8">union case UpdateField.Summary: string -&gt; UpdateField</div>
 <div class="tip" id="fs9">union case UpdateField.Description: string -&gt; UpdateField</div>
-<div class="tip" id="fs10">val myIssue : obj<br /><br />Full name: Tutorial.myIssue</div>
-<div class="tip" id="fs11"></div>
+<div class="tip" id="fs10">val myIssue : FSharp.Data.HttpResponse<br /><br />Full name: Tutorial.myIssue</div>
+<div class="tip" id="fs11">member Jira.CreateIssue : request:IssueRequest -&gt; FSharp.Data.HttpResponse</div>
+<div class="tip" id="fs12">member Jira.GetIssue : key:string -&gt; FSharp.Data.JsonProvider&lt;...&gt;.Root</div>
+<div class="tip" id="fs13">member Jira.DeleteIssue : key:string -&gt; FSharp.Data.HttpResponse</div>
+<div class="tip" id="fs14">property Jira.AvailableFields: string</div>
+<div class="tip" id="fs15">type UpdateField =<br />&#160;&#160;| Summary of string<br />&#160;&#160;| Description of string<br />&#160;&#160;member ToUpdateParameter : string * string<br /><br />Full name: JiraClient.UpdateField</div>
+<div class="tip" id="fs16">member Jira.UpdateIssueField : key:string -&gt; update:UpdateField -&gt; FSharp.Data.HttpResponse</div>
 
         </div>
         <div class="span3">
